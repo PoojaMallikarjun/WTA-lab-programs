@@ -1,0 +1,34 @@
+<?xml-stylesheet type="text/css" href="lab5.css"?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<h1> STUDENTS DESCRIPTION </h1>
+</head>
+<students>
+    <student>
+        <USN>USN : 1RN17CS067</USN>
+        <name>NAME : POOJA</name>
+        <college>COLLEGE : RNSIT</college>
+        <branch>BRANCH : Computer Science and Engineering</branch>
+        <year>YEAR : 2017</year>
+        <e-mail>E-Mail : pooja@gmail.com</e-mail>
+    </student>
+    <student>
+        <USN>USN : 1RN17CS069</USN>
+        <name>NAME : PRIYANKA</name>
+        <college>COLLEGE : RNSIT</college>
+        <branch>BRANCH : Computer Science and Engineering</branch>
+        <year>YEAR : 2017</year>
+        <e-mail>E-Mail : priyanka@gmail.com</e-mail>
+    </student>
+    <student>
+        <USN>USN : 1RN17EC074</USN>
+        <name>NAME : RAKSHITHA</name>
+        <college>COLLEGE : RNSIT</college>
+        <branch>BRANCH : Electronics and Communication Engineering
+        </branch>
+        <year>YEAR : 2017</year>
+        <e-mail>E-Mail : raksh@gmail.com</e-mail>
+    </student>
+</students>
+</html>
