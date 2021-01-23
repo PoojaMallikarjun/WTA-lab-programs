@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table,td,th{
+                border:1px solid black;
+                text-align: center;
+                /* border-collapse:collapse; */
+            }
+            table{
+                margin: auto;
+            }
+            tr,input,button{
+                height: 30px;
+            }
+            
+        </style>
+        <script>
+            function calc(op){
+                var i1=parseFloat(document.getElementById("inp1").value);
+                var i2=parseFloat(document.getElementById("inp2").value);
+                if (isNaN(i1) || isNaN(i2))
+                    {
+                        alert("ENTER VALID NUMBER");
+                        return;
+                    }
+                var finalOp;
+                switch(op){
+                    case '+':
+                        finalOp=i1+i2;
+                        break;
+                    case '-':
+                        finalOp=i1-i2;
+                        break;
+                    case '*':
+                        finalOp=i1*i2;
+                        break;
+                    case '/':
+                        if(i2!=0){
+                            finalOp=i1/i2;
+                        }else{
+                            document.getElementById("output").innerHTML="Infinity";
+                            return;
+                        }                        
+                        break;
+                }                
+                document.getElementById("output").innerHTML=finalOp;
+            }
+            function clr() {
+                    inp1.value = "0";
+                     inp2.value = "0";
+                    document.getElementById("output").innerHTML = "";
+            }
+            
+        </script>
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <table>
+            <tr><th colspan="4">Simple Calculator</th></tr>
+            <tr>
+                <td>value1</td><td><input type="text" id="inp1" value="0"></input></td>
+                <td>value2</td><td><input type="text" id="inp2" value="0"></input></td>
+            </tr>
+            <tr>
+                <td><button id="add" onclick="calc('+')">Addition</button></td>
+                <td><button id="sub" onclick="calc('-')">Subtraction</button></td>
+                <td><button id="mul" onclick="calc('*')">Multiplication</button></td>
+                <td><button id="div" onclick="calc('/')">Division</button></td>
+            </tr>
+            <tr>
+                <td>Answer:</td>
+                <td><p id="output"></p></td>
+                <td colspan="2"><button onclick="clr()">Clear All</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
