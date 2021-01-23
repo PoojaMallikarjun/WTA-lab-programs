@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>shrinking/growing</title>
+        <style>
+            p{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <p id="txt"></p>
+        <script>
+            var ele=document.getElementById("txt");
+            var size=5;
+            var increasing=true;
+            var lb=5;
+            var ub=50;
+            var step=5;
+            var time_interval=1000;
+            setInterval(function(){
+                if(size<=lb){
+                    increasing=true;
+                    ele.style.color="red";
+                    size=lb+step;
+                    ele.style.fontSize=size+"pt";
+                    ele.innerHTML="TEXT GROWING";
+                }
+                else if(size>=ub){
+                    increasing=false;
+                    ele.style.color="blue";
+                    size=ub-step;
+                    ele.style.fontSize=size+"pt";
+                    ele.innerHTML="TEXT SHRINKING";
+                }else{
+                    if(increasing){
+                        size=size+step;
+                    }
+                    else {
+                        size=size-step;
+                    }
+                    ele.style.fontSize=size+"pt";
+                }
+            },time_interval);
+        </script>
+    </body>
+</html>
